@@ -38,6 +38,7 @@ module InvAsyncJob
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.active_support.isolation_level = :fiber
     config.active_job.queue_adapter = :async_job
   end
 end
